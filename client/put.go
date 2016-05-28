@@ -253,11 +253,11 @@ func isValidDataPoint(data *DataPoint) bool {
 		return false
 	}
 	switch data.Value.(type) {
-	case int64:
+	case int, int8, int16, int32, int64:
 		return true
-	case int:
+	case uint, uint8, uint16, uint32, uint64:
 		return true
-	case float64:
+	case float32, float64:
 		return true
 	case string:
 		return true
